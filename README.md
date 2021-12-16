@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Cooking Recipe Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+__This repo contains only the front end of the application  
+please see CapstoneAPI repo for backend.__
 
-## Available Scripts
+## Design by: Kyle Melton
 
-In the project directory, you can run:
+__Summary:__ A webpage to write, edit, store, and organize cooking recipes.\
+The page itself will have a search bar and/or buttons to search for keywords (i.e., recipe names, lunch/dinner/breakfast) and have the display update on page. 
 
-### `npm start`
+__Problem:__ It can be difficult to keep track and update recipes on paper \
+__Solution:__ Creates a digital platform to make recipes easily accessible
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+__MVP:__ A responsive webpage that can take in user input and display data on page useing ReactJS. \
+Use .Net framework and C# as the backend API, and SQL/SSMS for storing the data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+|       __Date__     |           __Item__           |
+|:------------------:|:----------------------------:|
+| __End of Day 8th__ | Finish project outline, project uploaded to GitHub |
+| __End of Day 15th__  | Page display created, basic API created, Single SQL Table Created |
+| __End of Day 22nd__ | Consume API, Page routing, Finalize search bar/buttons |
+| __End of Day 30th__ | Polish CSS, Split tables for more refined searches, explore moving local DB to Azure |
 
-### `npm test`
+## Training Plan
+I plan to revisit parts of the already completed training and follow similar trainings from other sites. \
+Time for completion of training will vary depending on my familiarity with the material.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ReactJS: [Building modern user interfaces with React (linkedin.com)](https://www.linkedin.com/learning/react-js-essential-training/building-modern-user-interfaces-with-react?autoAdvance=true&autoSkip=false&autoplay=true&resume=true&u=3322) \
+	     [React: Working with APIs (linkedin.com)]() \
+	     [Building a React site with CSS Modules (linkedin.com)]() \
+         [Understanding modern React (linkedin.com)]() \
+         [React: Getting Started (pluralsight)]() \
+         [Using React Hooks (pluralsight)]()
 
-### `npm run build`
+C#: C# [Essential Training: 1 Syntax and Object Oriented Programming (linkedin.com)]() \
+       [Introduction to Language Integrated Query (linkedin.com)]() \
+       [REST in ASP.NET Core - Learn | Microsoft Docs]() \
+       [Get Started with ASP.NET Web API 2 (C#) - ASP.NET 4.x | Microsoft Docs]() \
+       [C# Fundamentals (pluralsight)]()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+SQL: [Databases - SQL Server | Microsoft Docs]() \
+     [Understand star schema and the importance for Power BI - Power BI | Microsoft Docs]() \
+     [Create Primary Keys in SQL Server - SQL Server | Microsoft Docs]() \
+     [ASP.NET Core Fundamentals (pluralsight)]() \
+     [Introduction to SQL (pluralsight]()
