@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import './Pages.css';
+import {recipeData} from './Data';
 
 const Pages = () => {
   const [recipes, setRecipes] = useState([
@@ -11,11 +12,19 @@ const Pages = () => {
     },
   ])
   return (
-    <div className="RecipeCards">
-      {recipes.map((recipe) => (
-        <h2 key={recipe.id}>{recipe.title}</h2>
-        ))}
-    </div>
+    <>
+      <div className="RecipeCards">
+        {recipeData.map((data, key) => {
+          return (
+            <div key={data.id}>
+              <h3>{data.title}</h3>
+              <li>{data.ingrediants}</li>
+              <p>{data.description}</p>
+            </div>
+            ) 
+        })}
+      </div>
+    </>
   )
 }
 
