@@ -2,15 +2,7 @@ import {useState} from 'react';
 import './Pages.css';
 import {recipeData} from './Data';
 
-const Pages = () => {
-  const [recipes, setRecipes] = useState([
-    {
-      id: 1,
-      title: 'Chicken Noodle Soup',
-      ingrediants: 'One can of soup',
-      description: 'It\'s chicken noodle soup from a can',
-    },
-  ])
+function Pages(){
   return (
     <>
       <div className="RecipeCards">
