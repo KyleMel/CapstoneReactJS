@@ -29,9 +29,7 @@ class App extends Component {
         <SearchBar />
         <Modal show={this.state.show} handleClose={this.hideModal}/>
         <button type="button" onClick={this.showModal}>Open</button>
-        <button type="button" onClick={createNewRecipe}>Create</button>
-        <button type="button" onClick={editNewRecipe}>Edit</button>
-        <button type="button" onClick={deleteNewRecipe}>Delete</button>
+        <Buttons />
         <Pages />
       </main>
     );
