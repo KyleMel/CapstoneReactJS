@@ -1,21 +1,22 @@
-import React from 'react';
-import Pagescss from './Pages.css';
+import {useState} from 'react';
+import './Pages.css';
 
-class Pages extends React.Component {
-  render() {
-  
-    return (
-      <div className="RecipeCards">
-        <h3>*JSON prop*</h3>
-        <ul>
-          <li>*JSON prop*</li>
-          <li>*JSON prop*</li>
-          <li>*JSON prop*k</li>
-        </ul>
-        <p>*JSON prop*</p>
-      </div>
-    );
-  }
+const Pages = () => {
+  const [recipes, setRecipes] = useState([
+    {
+      id: 1,
+      title: 'Chicken Noodle Soup',
+      ingrediants: 'One can of soup',
+      description: 'It\'s chicken noodle soup from a can',
+    },
+  ])
+  return (
+    <div className="RecipeCards">
+      {recipes.map((recipe) => (
+        <h2 key={recipe.id}>{recipe.title}</h2>
+        ))}
+    </div>
+  )
 }
 
 export default Pages;
