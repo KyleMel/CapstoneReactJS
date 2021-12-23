@@ -29,8 +29,7 @@ class App extends Component {
         <Title />
         <SearchBar RecipeData={this.state.RecipeData} />
         <Modal show={this.state.show} handleClose={this.hideModal} /*handleSave={this.saveRecipe}*//>
-        <button type="button" onClick={this.showModal}>Open</button>
-        <Buttons />
+        <Buttons handleOpen={this.showModal}/>
         <Grid RecipeData={this.state.RecipeData} />
       </main>
     );
