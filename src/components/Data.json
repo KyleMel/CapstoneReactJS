@@ -1,8 +1,8 @@
-export const recipeData = [
+[
   {
-    id: 1,
-    title:"Home Made Chili",
-    ingrediants: [
+    "id": 1,
+    "title":"Home Made Chili",
+    "ingrediants": [
       "1lb ground beef 1 cup chopped onions",
       "2 cloves garlic, finely chopped, or 1/4 teaspoon garlic powder",
       "1 tablespoon chili powder",
@@ -13,7 +13,7 @@ export const recipeData = [
       "1 can (14.5 oz) Muir Glen™ organic diced tomatoes, undrained",
       "1 can (19 oz) Progresso™ red kidney beans, undrained" 
     ],
-    description: [
+    "description": [
       "In 3-quart saucepan, cook beef, onions and garlic over medium heat 8 to 10 minutes",
       "stirring occasionally, until beef is thoroughly cooked; drain.",
       "Stir in chili powder, oregano, cumin, salt, pepper sauce and tomatoes.",
@@ -22,11 +22,10 @@ export const recipeData = [
       "Cook uncovered about 20 minutes, stirring occasionally, until desired thickness."
     ]
   },
-
   {
-    id: 2,
-    title:"Tenderloin Sandwiches",
-    ingrediants: [
+    "id": 2,
+    "title":"Tenderloin Sandwiches",
+    "ingrediants": [
       "2 whole beef tenderloins, trimmed (trimmed weight 2 1/2 to 3 1/2 pounds)",
       "1/4 cup olive oil",
       "1 cup crushed tri-colored peppercorns", 
@@ -34,7 +33,7 @@ export const recipeData = [
       "Grainy brown mustard, for serving",
       "Horseradish sauce, for serving" 
     ],
-    description: [
+    "description": [
       "Preheat the oven to 475 degrees F.",
       "Brush the tenderloins with the olive oil and then roll in the crushed peppercorns.",
       "Place the meat on a roasting pan and roast for 20 to 25 minutes.", 
@@ -44,9 +43,9 @@ export const recipeData = [
   },
 
   {
-    id:3,
-    title:"Crème Brûlée",
-    ingrediants: [
+    "id":3,
+    "title":"Crème Brûlée",
+    "ingrediants": [
      "6 egg yolks",
       "2 cups whipping cream",
       "1/3 cup granulated sugar",
@@ -54,7 +53,7 @@ export const recipeData = [
       "Boiling water",
       "8 teaspoons granulated sugar"
     ],
-    description: [
+    "description": [
       "Heat oven to 350°F. In 13x9-inch pan, place 4 (6-oz) ceramic ramekins.",
       "In small bowl, slightly beat egg yolks with wire whisk.",
       "In large bowl, stir whipping cream, 1/3 cup granulated sugar and the vanilla until well mixed.",
@@ -71,5 +70,5 @@ export const recipeData = [
       "until sugar is melted and light golden brown. (To caramelize sugar in the broiler, see Broiler Directions below.)",
       "Serve immediately, or refrigerate up to 8 hours before serving."
     ]
-  },
-];
+  }
+]

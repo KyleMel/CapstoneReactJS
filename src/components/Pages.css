@@ -1,6 +1,8 @@
 .RecipeCards {
+  display: inline-block;
+  width: 90%;
+  border-radius: 3px;
   border: 1px solid black;
-  margin: 5%;
-  padding: 1%;
-  width: 300px;
+  background-color: white;
+  padding: 20px 20px 25px 20px;
 }

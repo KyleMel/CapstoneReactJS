@@ -1,22 +1,12 @@
-import {useState} from 'react';
 import './Pages.css';
-import {recipeData} from './Data';
 
-function Pages(){
+const Pages = (props) => {
   return (
-    <>
-      <div className="RecipeCards">
-        {recipeData.map((data, key) => {
-          return (
-            <div key={data.id}>
-              <h3>{data.title}</h3>
-              <li>{data.ingrediants}</li>
-              <p>{data.description}</p>
-            </div>
-            ) 
-        })}
-      </div>
-    </>
+    <div className='RecipeCards'>
+      <h2>{props.fact.title}</h2>
+      <li><ul>{props.fact.ingrediants}</ul></li>
+      <p>{props.fact.description}</p>
+    </div>
   )
 }
 
