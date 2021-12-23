@@ -3,8 +3,8 @@ import Pages from './Pages';
 import './PageGrid.css';
 
 export default class Grid extends React.Component {
-  renderFacts() {
-    return this.props.facts.map(item =>
+  renderData() {
+    return this.props.RecipeData.map(item =>
       <Pages 
         key={item.id}
         fact={item}
@@ -14,7 +14,7 @@ export default class Grid extends React.Component {
   render() {
     return (
       <section className='Grid'>
-        {this.renderFacts()}
+        {this.renderData()}
       </section>
     );
   }

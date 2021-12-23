@@ -6,3 +6,7 @@
   background-color: white;
   padding: 20px 20px 25px 20px;
 }
+
+.CheckBox {
+  float: right;
+}

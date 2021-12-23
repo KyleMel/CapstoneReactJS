@@ -1,0 +1,11 @@
+.SearchBar {
+  font-size: large;
+  margin: 5px;
+  padding: 5px;
+}
+.Label {
+  padding-right: 5px;
+}
+.Input {
+  padding-left: 5px;
+}

@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
+import './SearchBar.css';
 
 export const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("");
 
   return (
-    <>
-      <label>Search your recipes</label>
-      <input type="text" placeholder='enter recipe name here' />
-    </>
+    <div className='SearchBar'>
+      <label className='Label'>Search your recipes</label>
+      <input className='Input' type="text" placeholder='enter recipe name here' />
+    </div>
   );
 }
 
