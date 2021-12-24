@@ -27,10 +27,10 @@ class App extends Component {
     return (
       <main className='App'>
         <Title />
-        <SearchBar RecipeData={this.state.RecipeData} />
+        <SearchBar data={this.state.RecipeData} />
         <Modal show={this.state.show} handleClose={this.hideModal} /*handleSave={this.saveRecipe}*//>
         <Buttons handleOpen={this.showModal}/>
-        <Grid RecipeData={this.state.RecipeData} />
+        <Grid data={this.state.RecipeData} />
       </main>
     );
   }

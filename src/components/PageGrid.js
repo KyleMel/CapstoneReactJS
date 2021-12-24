@@ -4,7 +4,7 @@ import './PageGrid.css';
 
 export default class Grid extends React.Component {
   renderData() {
-    return this.props.RecipeData.map(item =>
+    return this.props.data.map(item =>
       <Pages 
         key={item.id}
         fact={item}
