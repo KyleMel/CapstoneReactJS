@@ -14,8 +14,6 @@ class App extends Component {
       show: false,
       RecipeData,
     };
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
   }
   showModal = () => {
     this.setState({ show: true});
@@ -29,7 +27,7 @@ class App extends Component {
         <Title />
         <SearchBar data={this.state.RecipeData} />
         <Modal show={this.state.show} handleClose={this.hideModal} /*handleSave={this.saveRecipe}*//>
-        <Buttons handleOpen={this.showModal}/>
+        <Buttons show={this.showModal}/>
         <Grid data={this.state.RecipeData} />
       </main>
     );

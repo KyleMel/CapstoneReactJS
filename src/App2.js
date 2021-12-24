@@ -2,9 +2,9 @@ import './App.css';
 import React, {Component, useState, useEffect} from 'react';
 import Title from './components/Title';
 import SearchBar from './components/SearchBar';
-import Buttons from './components/Buttons';
-import Modal from './components/Modal';
-import Grid from './components/PageGrid';
+import Buttons from './components/button/Buttons';
+import Modal from './components/pages/Modal';
+import Grid from './components/pages/PageGrid';
 import RecipeData from './components/Data.json';
 
 function App2() {
@@ -12,16 +12,13 @@ function App2() {
   const [searchTerm, setSearchTerm] = useState('')
   const recipeData = RecipeData;
 
-  this.showModal = this.showModal.bind(this);
-  this.hideModal = this.hideModal.bind(this);
-
     return (
       <main className='App'>
       <Title />
-      <SearchBar recipeData={this.state.recipeData} />
-      <Modal show={this.state.show} handleClose={this.hideModal} /*handleSave={this.saveRecipe}*//>
-      <Buttons handleOpen={this.showModal}/>
-      <Grid recipeData={this.state.recipeData} />
+      <SearchBar data={recipeData} search={searchTerm} filter={setSearchTerm} />
+      <Modal show={showModal} hide={setShowModal} /*handleSave={this.saveRecipe}*//>
+      <Buttons hide={setShowModal}/>
+      <Grid data={recipeData} />
     </main>
   );
 }
