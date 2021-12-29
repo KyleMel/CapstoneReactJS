@@ -12,10 +12,14 @@ export default class Grid extends React.Component {
       );
   }
   render() {
+    if(this.props.data.length === 0){
+      return null;
+    } else {
     return (
       <section className='Grid'>
         {this.renderData()}
       </section>
-    );
+      );
+    }
   }
 }
