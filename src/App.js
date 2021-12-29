@@ -5,7 +5,6 @@ import SearchBar from './components/SearchBar';
 import Buttons from './components/Buttons';
 import Modal from './components/Modal';
 import Grid from './components/PageGrid';
-import RecipeTemplate from './components/RecipeTemplate';
 import RecipeData from './components/Data.json';
 
 class App extends Component {
@@ -15,26 +14,23 @@ class App extends Component {
       showModal: false,
       recipeData: RecipeData,
       userInput: '',
-      recipe: {},
+      filteredRecipes: [],
     };
   }
-  handleFilter = (event) => {
-    console.log("hi from onChange", event.target.value)
-    this.setState({
-      inputValue: event.target.value
-    })
- 
-  }
-  // handleFilter = (userInput,recipeData) => {
-  //  return recipeData.filter(recipe => {
-  //     if(recipe.includes(userInput)){
-  //       return recipe;
-  //     }
-  //     return recipe;
-  //   })
-  // };
+  handleFilter = (userInput,recipeData) => {
+    if(!userInput) {
+      return recipeData;
+    }
+    return recipeData.filter((recipeData) => {
+      const recipe = recipeData.Title;
+      console.log(userInput);
+      return recipe.includes(recipeData);
+    });
+  };
   handleUserInput = (event) => {
-    this.setState({userInput: event.target.value, filteredRecipes: this.handleFilter(event.target.value, this.state.recipeData)})
+    this.setState({
+      userInput: event.target.value, 
+      filteredRecipes: this.handleFilter(this.state.userInput, this.state.recipeData)})
   };
   showModal = () => {
     this.setState({ show: true});
@@ -44,19 +40,13 @@ class App extends Component {
   };
  
   render() {
-
-    const filteredRecipe = 
-    this.state.recipeData.filter(recipe => {
-      return recipe.name.includes(this.state.inputValue)
-    })
-
     return (
       <main className='App'>
         <Title />
-        <SearchBar data={this.state.recipeData} handleUserInput={this.handleUserInput} userInputValue={this.state.userInput} onHandleFilter={this.handleFilter} />
+        <SearchBar handleUserInput={this.handleUserInput} userInputValue={this.state.userInput}/>
         <Modal show={this.state.show} handleClose={this.hideModal} />
         <Buttons show={this.showModal}/>
-        <Grid data={this.state.recipeData} filteredRecipes={filteredRecipe} />
+        <Grid data={this.state.recipeData} filteredRecipes={this.state.filteredRecipes} />
       </main>
     );
   }
