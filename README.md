@@ -10,7 +10,6 @@ After cloning project use the following commands in vscode
 
 - Json data moved to a DB
 - Import API via axios
-- Searchbar that filters user input and hides any non-matching recipe titles on page
 - Selecting edit button after selecting a recipe checkbox should open a modal with fields  
   defined from selected recipe for editing.
 - Selecting delete button after selecting recipe checkbox should bring up new modal asking  

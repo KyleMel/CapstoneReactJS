@@ -15,22 +15,27 @@ class App extends Component {
       recipeData: RecipeData,
       userInput: '',
       filteredRecipes: [],
+      showFilteredList: false
     };
   }
-  handleFilter = (userInput,recipeData) => {
+
+  handleFilter = (userInput, recipeData) => {
     if(!userInput) {
       return recipeData;
     }
     return recipeData.filter((recipeData) => {
-      const recipe = recipeData.Title;
-      console.log(userInput);
-      return recipe.includes(recipeData);
+      const recipeTitle = recipeData.title;
+      console.log({userInput, recipeData});
+      return recipeTitle.includes(userInput);
     });
   };
   handleUserInput = (event) => {
+    const filteredList = this.handleFilter(event.target.value, this.state.recipeData)
     this.setState({
       userInput: event.target.value, 
-      filteredRecipes: this.handleFilter(this.state.userInput, this.state.recipeData)})
+      filteredRecipes: filteredList,
+      showFilteredList: filteredList.length > 0
+    })
   };
   showModal = () => {
     this.setState({ show: true});
@@ -46,7 +51,7 @@ class App extends Component {
         <SearchBar handleUserInput={this.handleUserInput} userInputValue={this.state.userInput}/>
         <Modal show={this.state.show} handleClose={this.hideModal} />
         <Buttons show={this.showModal}/>
-        <Grid data={this.state.recipeData} filteredRecipes={this.state.filteredRecipes} />
+        <Grid allRecipes={this.state.recipeData} filteredRecipes={this.state.filteredRecipes} showFilteredList={this.state.showFilteredList} />
       </main>
     );
   }

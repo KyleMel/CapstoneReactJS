@@ -1,15 +1,15 @@
 import './Pages.css';
 import CheckBox from './CheckBox';
 
-const Pages = (props) => {
+const Pages = ({recipe}) => {
   return (
     <div className='RecipeCards'>
       <CheckBox />
-      <h2><u>{props.fact.title}</u></h2>
+      <h2><u>{recipe.title}</u></h2>
       <h3>Ingrediants</h3>
-      <ul><li>{props.fact.ingrediants}</li></ul>
+      <ul><li>{recipe.ingrediants}</li></ul>
       <h3>Instructions</h3>
-      <p>{props.fact.description}</p>
+      <p>{recipe.description}</p>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Button.css';
 
-export default function Buttons({show, onCreate, onEdit, onDelete, item}) {
+export default function Buttons({show, onEdit, onDelete, item}) {
   return (
        <div>
         <button className="Button btn btn-primary" onClick={show}>Create {item}</button>
