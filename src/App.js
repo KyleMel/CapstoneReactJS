@@ -24,9 +24,9 @@ class App extends Component {
       return recipeData;
     }
     return recipeData.filter((recipeData) => {
-      const recipeTitle = recipeData.title;
+      const recipeTitle = recipeData.title.toLowerCase();
       console.log({userInput, recipeData});
-      return recipeTitle.includes(userInput);
+      return recipeTitle.includes(userInput.toLowerCase());
     });
   };
   handleUserInput = (event) => {
