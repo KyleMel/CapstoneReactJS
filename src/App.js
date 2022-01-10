@@ -15,7 +15,8 @@ class App extends Component {
       recipeData: RecipeData,
       userInput: '',
       filteredRecipes: [],
-      showFilteredList: false
+      showFilteredList: false,
+      isChecked: true,
     };
   }
 
@@ -43,10 +44,16 @@ class App extends Component {
   hideModal = () => {
     this.setState({ show: false});
   };
+  myAlert = (event) => {
+    console.log(this.state.isChecked);
+    this.setState({ isCheck: false});
+    console.log(this.state.isChecked);
+  };
  
   render() {
     return (
       <main className='App'>
+        <input type='string' onChange={(event) => this.myAlert(event)} />
         <Title />
         <SearchBar handleUserInput={this.handleUserInput} userInputValue={this.state.userInput}/>
         <Modal show={this.state.show} handleClose={this.hideModal} />
