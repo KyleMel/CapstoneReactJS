@@ -26,7 +26,6 @@ class App extends Component {
     }
     return recipeData.filter((recipeData) => {
       const recipeTitle = recipeData.title.toLowerCase();
-      console.log({userInput, recipeData});
       return recipeTitle.includes(userInput.toLowerCase());
     });
   };
@@ -44,16 +43,10 @@ class App extends Component {
   hideModal = () => {
     this.setState({ show: false});
   };
-  myAlert = (event) => {
-    console.log(this.state.isChecked);
-    this.setState({ isCheck: false});
-    console.log(this.state.isChecked);
-  };
  
   render() {
     return (
       <main className='App'>
-        <input type='string' onChange={(event) => this.myAlert(event)} />
         <Title />
         <SearchBar handleUserInput={this.handleUserInput} userInputValue={this.state.userInput}/>
         <Modal show={this.state.show} handleClose={this.hideModal} />

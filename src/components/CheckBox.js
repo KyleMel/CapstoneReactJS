@@ -1,8 +1,11 @@
-export const CheckBox = props => {
+export const CheckBox = () => {
 
   return (
     <>
-     <input style={{float: "right"}} type="checkbox" />
+      <input 
+        type="checkbox"
+        style={{float: "right"}}  
+      />
     </>
   )
 }
